@@ -1,4 +1,6 @@
-﻿using Interpolant.Interpolation.Simplicial;
+﻿using Interpolant.Extrapolation;
+using Interpolant.Interpolation;
+using Interpolant.Interpolation.Simplicial;
 
 namespace Interpolant.Options
 {

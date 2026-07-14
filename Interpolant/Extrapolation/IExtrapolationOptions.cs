@@ -1,6 +1,4 @@
-﻿using Interpolant.Extrapolation;
-
-namespace Interpolant.Options
+﻿namespace Interpolant.Extrapolation
 {
     /// <summary>
     /// Defines the extrapolation options for an interpolator object.

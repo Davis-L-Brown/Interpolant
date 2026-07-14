@@ -1,5 +1,4 @@
-﻿using Interpolant.Options;
-using System;
+﻿using System;
 
 namespace Interpolant.Interpolation.Simplicial
 {

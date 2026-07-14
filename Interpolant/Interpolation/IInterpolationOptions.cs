@@ -1,6 +1,4 @@
-﻿using Interpolant.Interpolation;
-
-namespace Interpolant.Options
+﻿namespace Interpolant.Interpolation
 {
     /// <summary>
     /// Defines the interpolation options for an interpolator object.
