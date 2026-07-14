@@ -5,7 +5,7 @@ namespace Interpolant.Options
     /// <summary>
     /// Defines the interpolation options for an interpolator object.
     /// </summary>
-    public sealed class InterpolationOptions
+    public interface IInterpolationOptions
     {
         /// <summary>
         /// Gets the consumer selected <see cref="InterpolationMethod"/>.
@@ -17,6 +17,12 @@ namespace Interpolant.Options
         /// For more information on the available Interpolation methods, view
         /// <see cref="InterpolationMethod"/>.
         /// </remarks>
-        public InterpolationMethod Method { get; set; }
+        InterpolationMethod Method { get; }
+
+
+        /// <summary>
+        /// Validate the interpolation options for the interpolator object.
+        /// </summary>
+        void Validate();
     }
 }

@@ -9,40 +9,40 @@
         /// <summary>
         /// If duplicate coordinates are found, throw an exception.
         /// </summary>
-        Throw,
+        Throw = 1,
 
         /// <summary>
         /// If duplicate coordinates are found, ignore the new z value and keep
         /// the existing z value.
         /// </summary>
-        KeepFirst,
+        KeepFirst = 2,
 
         /// <summary>
         /// If duplicate coordinates are found, replace the existing z value
         /// with the new z value.
         /// </summary>
-        KeepLast,
+        KeepLast = 3,
 
         /// <summary>
         /// If duplicate coordinates are found, keep the smallest z value.
         /// </summary>
-        Smallest,
+        Smallest = 4,
 
         /// <summary>
         /// If duplicate coordinates are found, keep the largest z value.
         /// </summary>
-        Largest,
+        Largest = 5,
 
         /// <summary>
         /// If duplicate coordinates are found, replace the existing z value
         /// with the average of the z values.
         /// </summary>
-        AverageZ,
+        AverageZ = 6,
 
         /// <summary>
         /// If duplicate coordinates are found, replace the existing z value
         /// with the median of the z values.
         /// </summary>
-        MedianZ
+        MedianZ = 7
     }
 }

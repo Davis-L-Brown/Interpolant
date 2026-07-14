@@ -14,20 +14,20 @@ namespace Interpolant.Interpolation
         /// <remarks>
         /// Produces a discontinuous piecewise-constant surface.
         /// </remarks>
-        [Obsolete("Not yet implemented.", true)]
+        [Obsolete("Not yet implemented.", false)]
         NearestNeighbor = 1,
 
         /// <summary>
         /// Interpolates using functions defined piecewise over the simplices of
-        /// a triangulation of the sample locations.
+        /// a simplicial mesh of the sample locations.
         /// </summary>
         /// <remarks>
         /// In a two-dimensional domain, the simplices are triangles. The local
         /// function, polynomial degree, and continuity constraints are determined
         /// by the selected simplicial interpolation scheme.
         /// </remarks>
-        [Obsolete("Not yet implemented.", true)]
-        Simplical = 2,
+        [Obsolete("Not yet implemented.", false)]
+        Simplicial = 2,
 
         /// <summary>
         /// Interpolates using Sibson's natural neighbor coordinates derived

@@ -1,4 +1,6 @@
-﻿namespace Interpolant.Options
+﻿using Interpolant.Interpolation.Simplicial;
+
+namespace Interpolant.Options
 {
     /// <summary>
     /// Defines custom options for an interpolator object.
@@ -13,16 +15,18 @@
         /// <summary>
         /// Represents the <see cref="InputOptions"/> for an interpolator object.
         /// </summary>
-        public InputOptions Input { get; set; }
+        public InputOptions Input { get; set; } = new InputOptions();
 
         /// <summary>
-        /// Represents the <see cref="InterpolationOptions"/> for an interpolator object.
+        /// Represents the concrete <see cref="IInterpolationOptions"/> implementation 
+        /// for an interpolator object.
         /// </summary>
-        public InterpolationOptions Interpolation { get; set; }
+        public IInterpolationOptions Interpolation { get; set; } = new SimplicialOptions();
 
         /// <summary>
-        /// Represents the <see cref="ExtrapolationOptions"/> for an interpolator object.
+        /// Represents the concrete <see cref="IExtrapolationOptions"/> implementation 
+        /// for an interpolator object.
         /// </summary>
-        public ExtrapolationOptions Extrapolation { get; set; }
+        public IExtrapolationOptions Extrapolation { get; set; }
     }
 }

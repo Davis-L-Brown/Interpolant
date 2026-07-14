@@ -5,7 +5,7 @@ namespace Interpolant.Options
     /// <summary>
     /// Defines the extrapolation options for an interpolator object.
     /// </summary>
-    public sealed class ExtrapolationOptions
+    public interface IExtrapolationOptions
     {
         /// <summary>
         /// The consumer selected <see cref="ExtrapolationMethod"/>.
@@ -17,6 +17,12 @@ namespace Interpolant.Options
         /// For more information on the available extrapolation methods, view
         /// <see cref="ExtrapolationMethod"/>.
         /// </remarks>
-        public ExtrapolationMethod Method { get; set; }
+        ExtrapolationMethod Method { get; set; }
+
+
+        /// <summary>
+        /// Validate the extrapolation options for the interpolator object.
+        /// </summary>
+        void Validate();
     }
 }
