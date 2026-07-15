@@ -1,8 +1,8 @@
-﻿namespace Interpolant.Options.Resolved
+﻿namespace Interpolant.Congifuration.Output
 {
     /// <summary>
     /// Defines a resolved version of the consumer facing 
-    /// <see cref="Options.OutputOptions"/>. 
+    /// <see cref="OutputOptions"/>. 
     /// </summary>
     /// <remarks>
     /// <para>
@@ -18,7 +18,7 @@
     /// of the interpolant.
     /// </para>
     /// </remarks>
-    internal sealed class OutputOptions
+    internal sealed class OutputConfiguration
     {
         /// <summary>
         /// Get the file path to the base output directory.
@@ -63,7 +63,7 @@
 
 
         /// <summary>
-        /// Create an instance of <see cref="OutputOptions"/>.
+        /// Create an instance of <see cref="OutputConfiguration"/>.
         /// </summary>
         /// <param name="outputPath">
         /// The base directory that all logs will be placed in.
@@ -106,7 +106,7 @@
         /// <i>**Note - if not defined, will default to 
         /// <paramref name="outputPath"/>\images.</i>
         /// </param>
-        public OutputOptions(
+        public OutputConfiguration(
             string outputPath,
             bool createLogs, string logPath,
             bool createEvalTrace, string evalTracePath,

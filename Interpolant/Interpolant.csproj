@@ -9,4 +9,11 @@
     <PackageReference Include="MIConvexHull" Version="1.1.19.1019" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Congifuration\Extrapolation\" />
+    <Folder Include="Interpolation\Kriging\" />
+    <Folder Include="Interpolation\RadialBasis\" />
+    <Folder Include="Interpolation\Simplicial\" />
+  </ItemGroup>
+
 </Project>

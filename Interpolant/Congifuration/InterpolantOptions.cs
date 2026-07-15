@@ -1,8 +1,10 @@
-﻿using Interpolant.Extrapolation;
-using Interpolant.Interpolation;
-using Interpolant.Interpolation.Simplicial;
+﻿using Interpolant.Congifuration.Input;
+using Interpolant.Congifuration.Interpolation;
+using Interpolant.Congifuration.Interpolation.Simplicial;
+using Interpolant.Congifuration.Output;
+using Interpolant.Extrapolation;
 
-namespace Interpolant.Options
+namespace Interpolant.Congifuration
 {
     /// <summary>
     /// Defines custom options for an interpolator object.

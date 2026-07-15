@@ -1,8 +1,11 @@
-﻿namespace Interpolant.Options.Resolved
+﻿using Interpolant.Congifuration.Input;
+using Interpolant.Congifuration.Output;
+
+namespace Interpolant.Congifuration
 {
     /// <summary>
     /// Defines a resolved verion of the consumer facing 
-    /// <see cref="Options.InterpolantOptions"/>.
+    /// <see cref="InterpolantOptions"/>.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -18,26 +21,26 @@
     /// of the interpolant.
     /// </para>
     /// </remarks>
-    internal class InterpolantOptions
+    internal class InterpolantConfiguration
     {
         /// <summary>
-        /// Get the resolved <see cref="InputOptions"/>.
+        /// Get the resolved <see cref="InputConfiguration"/>.
         /// </summary>
-        public InputOptions Input { get; }
+        public InputConfiguration Input { get; }
 
         /// <summary>
-        /// Get the resolved <see cref="OutputOptions"/>.
+        /// Get the resolved <see cref="OutputConfiguration"/>.
         /// </summary>
-        public OutputOptions Output { get; }
+        public OutputConfiguration Output { get; }
 
 
         /// <summary>
-        /// Create a new instance of <see cref="Options.Resolved.InterpolantOptions"/>,
-        /// which is a resolved version of <see cref="Options.InterpolantOptions"/>
+        /// Create a new instance of <see cref="InterpolantConfiguration"/>,
+        /// which is a resolved version of <see cref="InterpolantOptions"/>
         /// </summary>
-        public InterpolantOptions(
-            InputOptions input,
-            OutputOptions output)
+        public InterpolantConfiguration(
+            InputConfiguration input,
+            OutputConfiguration output)
         {
             Input = input;
             Output = output;

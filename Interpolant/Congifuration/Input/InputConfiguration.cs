@@ -1,10 +1,10 @@
-﻿using Interpolant.Options.Enums;
+﻿using Interpolant.Congifuration.Input.Enums;
 
-namespace Interpolant.Options.Resolved
+namespace Interpolant.Congifuration.Input
 {
     /// <summary>
     /// Defines a resolved version of the consumer facing 
-    /// <see cref="Options.InputOptions"/>. 
+    /// <see cref="InputOptions"/>. 
     /// </summary>
     /// <remarks>
     /// <para>
@@ -20,7 +20,7 @@ namespace Interpolant.Options.Resolved
     /// of the interpolant.
     /// </para>
     /// </remarks>
-    internal sealed class InputOptions
+    internal sealed class InputConfiguration
     {
         /// <summary>
         /// Get the policy for duplicate inputed (x,y) coordinates.
@@ -29,9 +29,9 @@ namespace Interpolant.Options.Resolved
 
 
         /// <summary>
-        /// Create an instance of <see cref="InputOptions"/>.
+        /// Create an instance of <see cref="InputConfiguration"/>.
         /// </summary>
-        public InputOptions(DuplicateCoordinatePolicy duplicatePolicy)
+        public InputConfiguration(DuplicateCoordinatePolicy duplicatePolicy)
         {
             DuplicatePolicy = duplicatePolicy;
         }

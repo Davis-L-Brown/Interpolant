@@ -1,28 +1,30 @@
-﻿using System;
+﻿using Interpolant.Congifuration.Input;
+using Interpolant.Congifuration.Output;
+using System;
 
-namespace Interpolant.Options.Resolvers
+namespace Interpolant.Congifuration
 {
     /// <summary>
     /// Class responsible for resolving <see cref="InterpolantOptions"/>
-    /// into a <see cref="Resolved.InterpolantOptions"/>.
+    /// into a <see cref="InterpolantConfiguration"/>.
     /// </summary>
     internal static class InterpolantOptionsResolver
     {
         /// <summary>
         /// Resolve consumer facing <see cref="InterpolantOptions"/> into 
-        /// resolved <see cref="Resolved.InterpolantOptions"/>.
+        /// resolved <see cref="InterpolantConfiguration"/>.
         /// </summary>
         /// <param name="options">
         /// The consumer facing interpolant options object.
         /// </param>
         /// <returns>
-        /// A <see cref="Resolved.InterpolantOptions"/> object, created by
+        /// A <see cref="InterpolantConfiguration"/> object, created by
         /// validating and resolving <paramref name="options"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown when <paramref name="options"/> is null.
         /// </exception>
-        public static Resolved.InterpolantOptions Resolve(
+        public static InterpolantConfiguration Resolve(
             InterpolantOptions options)
         {
             if (options == null)
@@ -39,7 +41,7 @@ namespace Interpolant.Options.Resolvers
             //    interpolation,
             //    extrapolation);
 
-            return new Resolved.InterpolantOptions(
+            return new InterpolantConfiguration(
                 input, output);
         }
     }

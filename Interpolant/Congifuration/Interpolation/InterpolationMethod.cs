@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interpolant.Interpolation
+namespace Interpolant.Congifuration.Interpolation
 {
     /// <summary>
     /// Defines the interpolation method for query points inside of the 
@@ -36,7 +36,7 @@ namespace Interpolant.Interpolation
         /// <remarks>
         /// Produces a smooth local interpolant without introducing new extrema.
         /// </remarks>
-        [Obsolete("Not yet implemented.", true)]
+        [Obsolete("Not yet implemented.", false)]
         NaturalNeighbor = 3,
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Interpolant.Interpolation
         /// Produces a globally supported interpolant whose smoothness depends
         /// on the selected radial basis kernel.
         /// </remarks>
-        [Obsolete("Not yet implemented.", true)]
+        [Obsolete("Not yet implemented.", false)]
         RadialBasisFunction = 4,
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Interpolant.Interpolation
         /// Produces statistically optimal predictions under the assumed
         /// covariance model and can provide uncertainty estimates.
         /// </remarks>
-        [Obsolete("Not yet implemented.", true)]
+        [Obsolete("Not yet implemented.", false)]
         Kriging = 5
     }
 }

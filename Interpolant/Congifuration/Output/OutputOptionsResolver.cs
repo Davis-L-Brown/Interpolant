@@ -1,20 +1,20 @@
 ﻿using System;
 using System.IO;
 
-namespace Interpolant.Options.Resolvers
+namespace Interpolant.Congifuration.Output
 {
     /// <summary>
     /// Class responsible for resolving <see cref="OutputOptions"/>
-    /// into a <see cref="Resolved.OutputOptions"/>.
+    /// into a <see cref="OutputConfiguration"/>.
     /// </summary>
     internal static class OutputOptionsResolver
     {
         /// <summary>
         /// Resolve consumer facing <see cref="OutputOptions"/> object into 
-        /// a resolved <see cref="Resolved.OutputOptions"/> object.
+        /// a resolved <see cref="OutputConfiguration"/> object.
         /// </summary>
         /// <returns>
-        /// An <see cref="Resolved.OutputOptions"/> object, created by
+        /// An <see cref="OutputConfiguration"/> object, created by
         /// validating and resolving <paramref name="options"/>.
         /// </returns>
         /// <exception cref="ArgumentNullException">
@@ -35,7 +35,7 @@ namespace Interpolant.Options.Resolvers
         /// <exception cref="IOException">
         /// A path points to a file instead of a directory.
         /// </exception>
-        public static Resolved.OutputOptions Resolve(
+        public static OutputConfiguration Resolve(
             OutputOptions options)
         {
             if (options == null)
@@ -95,7 +95,7 @@ namespace Interpolant.Options.Resolvers
             }
 
 
-            return new Resolved.OutputOptions(
+            return new Resolved.OutputConfiguration(
                 outputPath,
                 options.CreateLogs, logPath,
                 options.CreateEvaluationTrace, evaluationTracePath,

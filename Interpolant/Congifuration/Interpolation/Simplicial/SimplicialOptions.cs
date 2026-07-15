@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interpolant.Interpolation.Simplicial
+namespace Interpolant.Congifuration.Interpolation.Simplicial
 {
     /// <summary>
     /// Defines a concrete instance of <see cref="IInterpolationOptions"/> for
@@ -25,6 +25,8 @@ namespace Interpolant.Interpolation.Simplicial
             SimplicialOrder order = SimplicialOrder.Linear)
         {
             Order = order;
+
+            Validate();
         }
 
 
