@@ -1,2 +1,2 @@
-# Interpolant
+# Approximation
 C# Math Library
