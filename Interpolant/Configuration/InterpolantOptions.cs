@@ -1,8 +1,8 @@
-﻿using Interpolant.Configuration.Input;
+﻿using Interpolant.Configuration.Extrapolation;
+using Interpolant.Configuration.Input;
 using Interpolant.Configuration.Interpolation;
 using Interpolant.Configuration.Interpolation.Simplicial;
 using Interpolant.Configuration.Output;
-using Interpolant.Extrapolation;
 
 namespace Interpolant.Configuration
 {

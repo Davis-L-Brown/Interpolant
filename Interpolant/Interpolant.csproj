@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configuration\Extrapolation\" />
+    <Folder Include="Extrapolation\" />
     <Folder Include="Interpolation\Kriging\" />
     <Folder Include="Interpolation\RadialBasis\" />
     <Folder Include="Interpolation\Simplicial\" />

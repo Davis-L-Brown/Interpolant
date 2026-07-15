@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interpolant.Extrapolation
+namespace Interpolant.Configuration.Extrapolation
 {
     /// <summary>
     /// Defines the extrapolation method for query points outside of the
