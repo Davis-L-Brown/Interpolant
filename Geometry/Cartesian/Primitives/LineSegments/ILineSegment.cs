@@ -1,26 +1,26 @@
-﻿using Geometry.Cartesian.Coordinates;
+﻿using Geometry.Cartesian.Points;
 
-namespace Geometry.Cartesian.LineSegment
+namespace Geometry.Cartesian.Primitives.LineSegments
 {
     /// <summary>
     /// Represents a line segment with a start point and an end point.
     /// </summary>
-    /// <typeparam name="TCoordinate">
-    /// A <see cref="ICoordinate"/> implementation, denoting what dimension the
+    /// <typeparam name="TPoint">
+    /// An <see cref="IPoint"/> implementation, denoting what dimension the
     /// line segment exists in.
     /// </typeparam>
-    internal interface ILineSegment<out TCoordinate>
-        where TCoordinate : ICoordinate1D
+    public interface ILineSegment<out TPoint>
+        where TPoint : IPoint
     {
         /// <summary>
-        /// The starting <see cref="ICoordinate"/>.
+        /// The starting <see cref="TPoint"/>.
         /// </summary>
-        TCoordinate StartPoint { get; }
+        TPoint StartPoint { get; }
 
         /// <summary>
-        /// The ending <see cref="ICoordinate"/>.
+        /// The ending <see cref="TPoint"/>.
         /// </summary>
-        TCoordinate EndPoint { get; }
+        TPoint EndPoint { get; }
 
         /// <summary>
         /// The length of the line segment.

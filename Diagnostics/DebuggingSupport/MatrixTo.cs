@@ -2,13 +2,13 @@
 using System.Data;
 using System.Diagnostics;
 
-namespace Interpolant.Diagnostics.DebuggingSupport
+namespace Diagnostics.DebuggingSupport
 {
     /// <summary>
     /// Defines a static class that allows the conversion of a 
     /// <see cref="Matrix{T}"/> to a <see cref="System.Data.DataTable"/>.
     /// </summary>
-    internal static class MatrixTo
+    public static class MatrixTo
     {
         /// <summary>
         /// Convert a <see cref="Matrix{T}"/> to 

@@ -1,7 +1,7 @@
-﻿using Geometry.Cartesian.Coordinates;
-using Geometry.Cartesian.LineSegment;
+﻿using Geometry.Cartesian.Points;
+using Geometry.Cartesian.Primitives.LineSegments;
 
-namespace Geometry.Cartesian.Primitives
+namespace Geometry.Cartesian.Primitives.Triangles
 {
     /// <summary>
     /// Represents a triangle.
@@ -15,16 +15,10 @@ namespace Geometry.Cartesian.Primitives
     /// <typeparam name="TVertex">
     /// Represents the vertices of the triangle.
     /// <br/>
-    /// Must be an inheritor of <see cref="ICoordinate2D"/>.
+    /// Should be an inheritor of <see cref="IPoint2D"/> or higher.
     /// </typeparam>
-    /// <typeparam name="TEdge">
-    /// Represents the edge of the triangle.
-    /// <br/>
-    /// Must be an inheritor of <see cref="ILineSegment{TVertex}"/>.
-    /// </typeparam>
-    internal interface ITriangle<out TVertex, out TEdge>
-        where TVertex : ICoordinate2D
-        where TEdge : ILineSegment<TVertex>
+    public interface ITriangle<TVertex>
+        where TVertex : IPoint 
     {
         /// <summary>
         /// Get vertex 1 (or A).
@@ -61,23 +55,23 @@ namespace Geometry.Cartesian.Primitives
         /// <summary>
         /// The triangle edge opposite angle theta 1.
         /// </summary>
-        TEdge E1 { get; }
+        ILineSegment<TVertex> E1 { get; }
 
         /// <summary>
         /// The triangle edge opposite angle theta 2.
         /// </summary>
-        TEdge E2 { get; }
+        ILineSegment<TVertex> E2 { get; }
 
         /// <summary>
         /// The triangle edge opposite angle theta 3.
         /// </summary>
-        TEdge E3 { get; }
+        ILineSegment<TVertex> E3 { get; }
 
 
         /// <summary>
         /// The center of the triangle.
         /// </summary>
-        ICoordinate2D Centroid { get; }
+        IPoint Centroid { get; }
 
         /// <summary>
         /// The area of the triangle.
