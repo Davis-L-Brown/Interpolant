@@ -87,8 +87,8 @@ namespace Geometry.Cartesian.Primitives.Triangles
 
             // the magnitude of V12 x V13 is the area of the parallelogram
             // spanned by the vectors
-            Vector3D doubleAreaVector = Vector3D.Cross(v12, v13);
-            double doubledArea = doubleAreaVector.Magnitude;
+            Vector3D doubledAreaVector = Vector3D.Cross(v12, v13);
+            double doubledArea = doubledAreaVector.Magnitude;
 
             if (TriangleValidator.IsDegenerate(
                 doubledArea,

@@ -8,9 +8,6 @@ namespace Geometry.Cartesian.Primitives.Triangles
     /// </summary>
     /// <remarks>
     /// Can only exist in 2D or higher.<br/>
-    /// If a triangle is created from vertices in a higher dimensionality,
-    /// data outside of the 2 dimensions required to create the triangle will
-    /// not be retained in the triangle object.
     /// </remarks>
     /// <typeparam name="TVertex">
     /// Represents the vertices of the triangle.

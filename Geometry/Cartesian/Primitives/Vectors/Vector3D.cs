@@ -81,12 +81,8 @@ namespace Geometry.Cartesian.Primitives.Vectors
         }
 
         /// <summary>
-        /// Calculates the scalar two-dimensional cross product.
+        /// Calculates the vector three-dimensional cross product.
         /// </summary>
-        /// <remarks>
-        /// The result is the Z component of the corresponding
-        /// three-dimensional cross product.
-        /// </remarks>
         public static Vector3D Cross(Vector3D left, Vector3D right)
         {
             return new Vector3D(

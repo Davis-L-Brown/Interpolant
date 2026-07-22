@@ -92,8 +92,8 @@ namespace Geometry.Cartesian.Primitives.Triangles
 
             // use V12 & V13 to calculate cross product
             // because they have the same origin
-            double signedDoubleArea = Vector2D.Cross(v12, v13);
-            double doubledArea = Math.Abs(signedDoubleArea);
+            double signedDoubledArea = Vector2D.Cross(v12, v13);
+            double doubledArea = Math.Abs(signedDoubledArea);
 
             if (TriangleValidator.IsDegenerate(
                 doubledArea,
@@ -104,7 +104,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
                 throw new DegenerateTriangleException();
 
             // Calculate and assinge signed area
-            SignedArea = 0.5 * signedDoubleArea;
+            SignedArea = 0.5 * signedDoubledArea;
 
             // Assign area
             Area = Math.Abs(SignedArea);
