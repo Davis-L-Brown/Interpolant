@@ -23,10 +23,7 @@ namespace Geometry.Cartesian.Primitives.LineSegments
         /// <summary>
         /// Gets the direction of the line segment.
         /// </summary>
-        public Vector2D Direction =>
-            new Vector2D(
-                End.X - Start.X,
-                End.Y - Start.Y);
+        public Vector2D Direction => Vector2D.FromPoints(Start, End);
 
         /// <inheritdoc/>
         IVector ILineSegment<TPoint>.Direction => Direction;

@@ -34,8 +34,8 @@ namespace Geometry.Cartesian.Primitives.Vectors
         /// from two <see cref="IPoint1D"/>.
         /// </summary>
         public static Vector1D FromPoints(
-            IPoint2D start,
-            IPoint2D end)
+            IPoint1D start,
+            IPoint1D end)
         {
             return new Vector1D(
                 end.X - start.X);
