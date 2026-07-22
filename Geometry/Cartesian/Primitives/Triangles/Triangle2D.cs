@@ -60,7 +60,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
         ILineSegment<TVertex> ITriangle<TVertex>.E3 => E3;
 
 
-        private IPoint2D Centroid { get; }
+        public IPoint2D Centroid { get; }
         /// <inheritdoc/>
         IPoint ITriangle<TVertex>.Centroid => Centroid;
 

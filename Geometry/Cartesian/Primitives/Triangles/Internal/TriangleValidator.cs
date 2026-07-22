@@ -78,10 +78,7 @@ namespace Geometry.Cartesian.Primitives.Triangles.Internal
 
             double areaTolerance = relativeTolerance * scale2d;
 
-            if (doubledArea <= areaTolerance)
-                return true;
-
-            return false;
+            return doubledArea <= areaTolerance;
         }
 
 

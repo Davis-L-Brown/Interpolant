@@ -60,7 +60,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
         ILineSegment<TVertex> ITriangle<TVertex>.E3 => E3;
 
 
-        private IPoint3D Centroid { get; }
+        public IPoint3D Centroid { get; }
         /// <inheritdoc/>
         IPoint ITriangle<TVertex>.Centroid => Centroid;
 
@@ -93,7 +93,7 @@ namespace Geometry.Cartesian.Primitives.Triangles
             if (TriangleValidator.IsDegenerate(
                 doubledArea,
                 v12.MagnitudeSquared,
-                v12.MagnitudeSquared,
+                v13.MagnitudeSquared,
                 v23.MagnitudeSquared,
                 relativeDegeneracyTolerance))
                 throw new DegenerateTriangleException();
