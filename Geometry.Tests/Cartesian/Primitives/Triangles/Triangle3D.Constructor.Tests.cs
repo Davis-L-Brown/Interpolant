@@ -2,6 +2,7 @@
 using Geometry.Cartesian.Primitives.LineSegments;
 using Geometry.Cartesian.Primitives.Triangles;
 using Geometry.Cartesian.Primitives.Triangles.Exceptions;
+using Geometry.Quantities.Angles;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -68,18 +69,29 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             Assert.Throws<DegenerateTriangleException>(() => new Triangle3D(A, B, C));
         }
 
-
         [TestMethod]
-        public void Constructor_ShouldCalculateArea()
+        public void Constructor_ShouldCalculateAngles()
         {
+            IPoint3D A = new Point3D(0, 0, 0);
+            IPoint3D B = new Point3D(1, 0, 0);
+            IPoint3D C = new Point3D(0, 1, 0);
+            Triangle3D t = new Triangle3D(A, B, C);
 
+            Assert.IsTrue((Angle.Pi / 2).NearlyEquals(t.Theta1));
+            Assert.IsTrue((Angle.Pi / 4).NearlyEquals(t.Theta2));
+            Assert.IsTrue((Angle.Pi / 4).NearlyEquals(t.Theta3));
         }
 
 
         [TestMethod]
-        public void Constructor_ShouldCalculateNegativeSignedAreaWhen_Clockwise()
+        public void Constructor_ShouldCalculateArea()
         {
+            IPoint3D A = new Point3D(0, 0, 0);
+            IPoint3D B = new Point3D(4, 0, 0);
+            IPoint3D C = new Point3D(0, 3, 0);
+            Triangle3D t = new Triangle3D(A, B, C);
 
+            Assert.AreEqual(6.0, t.Area, 1e-12);
         }
     }
 }

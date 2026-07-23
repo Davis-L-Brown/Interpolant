@@ -2,7 +2,6 @@
 using Geometry.Cartesian.Primitives.Triangles;
 using Geometry.Cartesian.Primitives.Triangles.Exceptions;
 using Geometry.Quantities.Angles;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Geometry.Tests.Cartesian.Primitives.Triangles
 {
@@ -30,6 +29,7 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             Assert.Throws<ArgumentNullException>(() => new Triangle2D(p1, p2, p3));
         }
 
+
         [TestMethod]
         public void Constructor_ShouldThrowWhen_VerticeAreCollinear()
         {
@@ -37,8 +37,7 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             IPoint2D p2 = new Point2D(1, 0);
             IPoint2D p3 = new Point2D(2, 0);
 
-            Assert.Throws<DegenerateTriangleException>(() =>
-                new Triangle2D(p1, p2, p3));
+            Assert.Throws<DegenerateTriangleException>(() => new Triangle2D(p1, p2, p3));
 
             IPoint2D A = new Point2D(0, 0);
             IPoint2D B = new Point2D(0, 1);
@@ -53,6 +52,7 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             Assert.Throws<DegenerateTriangleException>(() => new Triangle2D(X, Y, Z));
         }
 
+
         [TestMethod]
         public void Constructor_ShouldThrowWhen_VerticesAreDuplicates()
         {
@@ -60,8 +60,7 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             IPoint2D B = new Point2D(0, 0);
             IPoint2D C = new Point2D(1, 0);
 
-            Assert.Throws<DegenerateTriangleException>(() =>
-                new Triangle2D(A, B, C));
+            Assert.Throws<DegenerateTriangleException>(() => new Triangle2D(A, B, C));
         }
 
 
@@ -71,11 +70,11 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             IPoint2D A = new Point2D(0, 0);
             IPoint2D B = new Point2D(1, 0);
             IPoint2D C = new Point2D(0, 1);
-
             Triangle2D t = new Triangle2D(A, B, C);
-            Assert.IsTrue( (Angle.Pi / 2).NearlyEquals(t.Theta1) );
-            Assert.IsTrue( (Angle.Pi / 4).NearlyEquals(t.Theta2) );
-            Assert.IsTrue( (Angle.Pi / 4).NearlyEquals(t.Theta3) );
+
+            Assert.IsTrue((Angle.Pi / 2).NearlyEquals(t.Theta1));
+            Assert.IsTrue((Angle.Pi / 4).NearlyEquals(t.Theta2));
+            Assert.IsTrue((Angle.Pi / 4).NearlyEquals(t.Theta3));
         }
 
 
@@ -85,7 +84,6 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             IPoint2D A = new Point2D(0, 0);
             IPoint2D B = new Point2D(4, 0);
             IPoint2D C = new Point2D(0, 3);
-
             Triangle2D t = new Triangle2D(A, B, C);
 
             Assert.AreEqual(6.0, t.Area, 1e-12);
@@ -99,7 +97,6 @@ namespace Geometry.Tests.Cartesian.Primitives.Triangles
             IPoint2D A = new Point2D(0, 0);
             IPoint2D B = new Point2D(0, 3);
             IPoint2D C = new Point2D(4, 0);
-
             Triangle2D t = new Triangle2D(A, B, C);
 
             Assert.AreEqual(6.0, t.Area, 1e-12);
